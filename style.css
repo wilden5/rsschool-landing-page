@@ -34,6 +34,11 @@ html, body {
     letter-spacing: 0;
 }
 
+.main-nav-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .header-controls {
     display: flex;
     gap: 2.4rem;
