@@ -399,7 +399,7 @@ body {
 .mobile-controls__android {
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 2.4rem;
     gap: 0.8rem;
     width: 20rem;
     height: 6.4rem;
@@ -414,9 +414,14 @@ body {
     background: #665F55;
 }
 
-.mobile-controls__ios:hover img,
-.mobile-controls__android:hover img {
-    filter: invert(1);
+.ios__icon path,
+.android__icon path {
+    fill: #403F3D;
+}
+
+.mobile-controls__ios:hover .ios__icon path,
+.mobile-controls__android:hover .android__icon path {
+    fill: #E1D4C9;
 }
 
 .mobile-controls__ios:hover .ios__text__line-1,
@@ -441,7 +446,7 @@ body {
     font-size: 1rem;
     line-height: 140%;
     letter-spacing: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .ios__text__line-2,
