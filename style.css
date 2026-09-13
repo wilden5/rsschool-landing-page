@@ -6,6 +6,7 @@ html, body {
     max-width: 1440px;
     font-family: 'Inter', sans-serif;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -296,4 +297,57 @@ body {
 
 .pagination__bar.active {
     background: #665F55;
+}
+
+.about__title {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 125%;
+    letter-spacing: 0;
+    color: #403F3D;
+    margin: 0 0 4rem;
+}
+
+.about {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-bottom: 10rem;
+}
+
+.about__title span {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.about__images {
+    display: flex;
+    gap: 4rem;
+}
+
+.images__column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.images__column-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.column-1__image1,
+.column-2__image2 {
+    object-fit: cover;
+    width: 66rem;
+    height: 59rem;
+    border-radius: 2rem;
+}
+
+.column-1__image2,
+.column-2__image1 {
+    object-fit: cover;
+    width: 66rem;
+    height: 43rem;
+    border-radius: 2rem;
 }
