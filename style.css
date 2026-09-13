@@ -200,6 +200,7 @@ body {
 .favorite-coffee {
     padding-right: 4rem;
     padding-left: 4rem;
+    margin-bottom: 10rem;
 }
 
 .favorite-coffee__title {
@@ -276,4 +277,23 @@ body {
     line-height: 125%;
     letter-spacing: 0;
     text-align: center;
+}
+
+.slider__pagination {
+    display: flex;
+    gap: 1.4rem;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.pagination__bar {
+    display: inline-block;
+    border-radius: 10rem;
+    height: 0.4rem;
+    width: 4rem;
+    background: #C1B6AD;
+}
+
+.pagination__bar.active {
+    background: #665F55;
 }
