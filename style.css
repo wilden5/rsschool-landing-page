@@ -351,3 +351,40 @@ body {
     height: 43rem;
     border-radius: 2rem;
 }
+
+.mobile-app {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-bottom: 10rem;
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+}
+
+.mobile-app__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.mobile-offer__title {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 125%;
+    letter-spacing: 0;
+    color: #403F3D;
+    margin: 0;
+}
+
+.mobile-offer__title span {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.mobile-offer__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: #403F3D;
+}
