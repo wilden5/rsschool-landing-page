@@ -387,4 +387,52 @@ body {
     line-height: 150%;
     letter-spacing: 0;
     color: #403F3D;
+    margin: 0;
+}
+
+.mobile-offer__mobile-controls {
+    display: flex;
+    gap: 2rem;
+}
+
+.mobile-controls__ios,
+.mobile-controls__android {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 20rem;
+    height: 6.4rem;
+    background: none;
+    cursor: pointer;
+    border: 0.1rem solid #665F55;
+    border-radius: 10rem;
+}
+
+.ios__text,
+.android__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem
+}
+
+.ios__text__line-1,
+.android__text__line-1 {
+    font-family: 'Inter', sans-serif;
+    color: #403F3D;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.ios__text__line-2,
+.android__text__line-2 {
+    font-family: 'Inter', sans-serif;
+    color: #403F3D;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0;
 }
