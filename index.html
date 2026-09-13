@@ -18,7 +18,7 @@
         </div>
         <nav class="main-nav">
             <ul class="main-nav-list">
-                <li><a class="nav-item-link" href="">Favorite coffee</a></li>
+                <li><a class="nav-item-link" href="#favorite-coffee">Favorite coffee</a></li>
                 <li><a class="nav-item-link" href="">About</a></li>
                 <li><a class="nav-item-link" href="">Mobile app</a></li>
                 <li><a class="nav-item-link" href="">Contact us</a></li>
@@ -48,7 +48,30 @@
         </div>
     </div>
 </header>
-<main class="main-content"></main>
+<main class="main-content">
+    <section class="favorite-coffee" id="favorite-coffee">
+        <h2 class="favorite-coffee__title">Choose your <span>favorite</span> coffee</h2>
+        <div class="favorite-coffee__slider">
+            <button class="slider__button slider__left">
+                <img src="assets/icons/arrow-left.png" alt="left-arrow-icon">
+            </button>
+            <div class="slider__card">
+                <img class="card__image" src="assets/images/coffee-slider-1.png" alt="coffee-slider-1">
+                <h2 class="card__title">S’mores Frappuccino</h2>
+                <p class="card__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                <h3 class="card__price">$5.50</h3>
+            </div>
+            <button class="slider__button slider__right">
+                <img src="assets/icons/arrow-right.png" alt="right-arrow-icon">
+            </button>
+        </div>
+        <div class="slider__pagination">
+            <span class="pagination__bar active"></span>
+            <span class="pagination__bar"></span>
+            <span class="pagination__bar"></span>
+        </div>
+    </section>
+</main>
 <footer class="main-footer"></footer>
 </body>
 </html>

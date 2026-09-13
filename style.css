@@ -196,3 +196,84 @@ body {
     right: 5.2rem;
     pointer-events: none;
 }
+
+.favorite-coffee {
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+.favorite-coffee__title {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 125%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #403F3D;
+    margin: 10rem 0 4rem;
+}
+
+.favorite-coffee__title span {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.favorite-coffee__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__button {
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #665F55;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100px;
+}
+
+.slider__button:hover {
+    background: #665F55;
+}
+
+.slider__button:hover img {
+    filter: invert(1);
+}
+
+.slider__card {
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__title {
+    margin: 2rem 0 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 125%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #403F3D;
+}
+
+.card__description {
+    margin: 1.6rem 0 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #403F3D;
+}
+
+.card__price {
+    margin: 1.6rem 0 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 125%;
+    letter-spacing: 0;
+    text-align: center;
+}
