@@ -409,6 +409,23 @@ body {
     border-radius: 10rem;
 }
 
+.mobile-controls__ios:hover,
+.mobile-controls__android:hover {
+    background: #665F55;
+}
+
+.mobile-controls__ios:hover img,
+.mobile-controls__android:hover img {
+    filter: invert(1);
+}
+
+.mobile-controls__ios:hover .ios__text__line-1,
+.mobile-controls__ios:hover .ios__text__line-2,
+.mobile-controls__android:hover .android__text__line-1,
+.mobile-controls__android:hover .android__text__line-2 {
+    color: #E1D4C9;
+}
+
 .ios__text,
 .android__text {
     display: flex;
