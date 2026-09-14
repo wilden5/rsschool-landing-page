@@ -84,7 +84,7 @@ button {
     border: 0.1rem solid #C1B6AD;
 }
 
-.theme-controls > button, .menu-button {
+.theme-controls > button, .menu-link {
     background: none;
     border: none;
     cursor: pointer;
@@ -114,7 +114,7 @@ button {
     opacity: 1;
 }
 
-.menu-button {
+.menu-link {
     position: relative;
     display: flex;
     gap: 0.8rem;
@@ -126,14 +126,15 @@ button {
     letter-spacing: 0;
     width: 7.2rem;
     height: 2.4rem;
+    text-decoration: none;
 }
 
-.menu-button img {
+.menu-link img {
     width: 2rem;
     height: 2rem;
 }
 
-.menu-button::after {
+.menu-link::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -144,7 +145,12 @@ button {
     transition: width 0.8s ease;
 }
 
-.menu-button:hover::after {
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.menu-link:hover::after,
+.menu-link.active::after {
     width: 100%;
 }
 
