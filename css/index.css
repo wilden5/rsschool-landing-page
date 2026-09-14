@@ -368,16 +368,16 @@ button {
 .column-1__image1,
 .column-2__image2 {
     object-fit: cover;
-    width: 66rem;
-    height: 59rem;
+    width: 100%;
+    height: 100%;
     border-radius: 2rem;
 }
 
 .column-1__image2,
 .column-2__image1 {
     object-fit: cover;
-    width: 66rem;
-    height: 43rem;
+    width: 100%;
+    height: 100%;
     border-radius: 2rem;
 }
 
@@ -391,6 +391,8 @@ button {
 .mobile-app__offer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
     gap: 4rem;
 }
 
@@ -457,6 +459,17 @@ button {
 .mobile-controls__android:hover .android__text__line-2 {
     color: #E1D4C9;
 }
+
+.mobile-app__image {
+    max-height: 63rem;
+    min-width: 46.323%;
+}
+
+.mobile-app__image img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .ios__text,
 .android__text {
