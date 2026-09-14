@@ -206,7 +206,7 @@ button {
     background: #E1D4C9;
 }
 
-.offer-button:hover::after {
+.offer-button::after {
     content: "";
     position: absolute;
     transform: translateY(-50%);
@@ -217,6 +217,12 @@ button {
     top: 3rem;
     right: 5.2rem;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.offer-button:hover::after {
+    opacity: 1;
 }
 
 .favorite-coffee {
