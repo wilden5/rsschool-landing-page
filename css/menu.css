@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-left: 4rem;
-    padding-right: 4rem;
     margin-top: 2rem;
     gap: 4rem;
     margin-bottom: 10rem;
@@ -79,8 +77,10 @@
 
 .menu-offer__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 310px);
+    justify-content: center;
     gap: 4rem;
+    width: 100%;
 }
 
 .menu-offer__product {
@@ -88,6 +88,8 @@
     flex-direction: column;
     border: 0.1rem solid #C1B6AD;
     border-radius: 4rem;
+    height: 50.6rem;
+    width: 100%;
 }
 
 .product__image {
