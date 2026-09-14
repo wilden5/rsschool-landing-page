@@ -45,6 +45,16 @@
     line-height: 150%;
     letter-spacing: 0;
     color: #403F3D;
+    padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+}
+
+.menu-offer__button.active {
+    background: #665F55;
+    color: #E1D4C9;
+}
+
+.menu-offer__button.active .menu-offer__icon-wrapper {
+    background: #E1D4C9;
 }
 
 .menu-offer__icon-wrapper {
@@ -55,4 +65,13 @@
     height: 3rem;
     border-radius: 10rem;
     background: #C1B6AD;
+}
+
+.menu-offer__button:hover {
+    background: #665F55;
+    color: #E1D4C9;
+}
+
+.menu-offer__button:hover .menu-offer__icon-wrapper {
+    background: #E1D4C9;
 }
