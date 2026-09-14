@@ -606,3 +606,9 @@ button {
 .contact-info__item-3 {
     gap: 0.8rem;
 }
+
+@media (max-width: 999px) {
+    .mobile-app {
+        flex-direction: column;
+    }
+}
