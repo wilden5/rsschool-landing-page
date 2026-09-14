@@ -507,6 +507,11 @@ body {
     background: none;
 }
 
+.footer__button:hover {
+    background: #292826;
+    border: 0.1rem solid #292826;
+}
+
 .footer__contact-info {
     display: flex;
     flex-direction: column;
