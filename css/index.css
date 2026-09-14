@@ -546,7 +546,6 @@ button {
 .contact-info__item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
@@ -557,14 +556,26 @@ button {
 
 .contact-info__text {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
-.contact-info__item:hover .contact-info__text::after {
+.contact-info__text::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -0.4rem;
-    width: 100%;
+    width: 0;
     height: 2px;
     background: #E1D4C9;
+    transition: width 0.7s ease;
+}
+
+.contact-info__item:hover .contact-info__text::after {
+    width: 100%;
+}
+
+.contact-info__item-3 {
+    gap: 0.8rem;
 }
