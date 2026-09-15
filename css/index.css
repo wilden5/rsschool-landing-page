@@ -154,8 +154,39 @@ button {
     width: 100%;
 }
 
+.burger-icon {
+    display: none;
+    cursor: pointer;
+    background: none;
+    height: 4.4rem;
+    width: 4.4rem;
+    border: 0.1rem solid #665F55;
+    border-radius: 10rem;
+    position: relative;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 2px;
+    background-color: #403F3D;
+}
+
+.burger-icon::before {
+    top: calc(50% - 4px);
+}
+
+.burger-icon::after {
+    top: calc(50% + 4px);
+}
+
 .header-hero {
     background-image: url("../assets/images/hero-banner.jpg");
+    background-position: center;
     border-radius: 4rem;
     margin-top: 2rem;
     height: 64.4rem;
@@ -613,5 +644,23 @@ button {
 @media (max-width: 999px) {
     .mobile-app {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-offer {
+        padding-left: 6rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-link {
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
     }
 }
