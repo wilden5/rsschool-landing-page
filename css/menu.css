@@ -34,7 +34,6 @@
     gap: 0.8rem;
     background: none;
     cursor: pointer;
-    width: 11.5rem;
     height: 4.6rem;
     border: 1px solid #C1B6AD;
     border-radius: 10rem;
@@ -45,6 +44,18 @@
     letter-spacing: 0;
     color: #403F3D;
     padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+}
+
+.menu-offer__coffee-button {
+    width: 11.5rem;
+}
+
+.menu-offer__tea-button {
+    width: 9rem;
+}
+
+.menu-offer__desert-button {
+    width: 12.4rem;
 }
 
 .menu-offer__button.active {

@@ -703,7 +703,7 @@ button {
     }
 
     .wrapper {
-        padding: 2rem 2rem 2rem;
+        padding: 2rem 2rem 4rem;
     }
 }
 
@@ -715,7 +715,7 @@ button {
 
 @media (max-width: 380px) {
     .wrapper {
-        padding: 2rem 1.6rem 1.6rem;
+        padding: 2rem 1.6rem 4rem;
     }
 
     .header-hero {
