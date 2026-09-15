@@ -16,7 +16,7 @@ button {
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 2rem 4rem;
+    padding: 2rem 4rem 4rem;
     box-sizing: border-box;
 }
 
@@ -662,5 +662,20 @@ button {
 
     .burger-icon {
         display: block;
+    }
+
+    .about__images {
+        flex-direction: column;
+    }
+
+    .about__image-wrapper-small {
+        display: none;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        align-items: normal;
     }
 }
