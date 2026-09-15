@@ -72,11 +72,13 @@ button {
 .theme-controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 8.8rem;
     height: 4.4rem;
     gap: 0.8rem;
     border-radius: 10rem;
     border: 0.1rem solid #C1B6AD;
+    padding: 3px;
 }
 
 .theme-controls > button, .menu-link {
@@ -87,31 +89,31 @@ button {
     margin: 0;
 }
 
-.light-theme-button {
+.light-theme-button.active {
+    background-color: #B0907A;
+}
+
+.light-theme-button,
+.dark-theme-button{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 40px;
+    border-radius: 10rem;
 }
 
-.dark-theme-button {
-    position: relative;
+.light-theme-button:hover {
+    background-color: #B0907A;
 }
 
-.dark-theme-button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../assets/icons/dark-coffee-icon-hover.png") no-repeat center;
-    background-size: contain;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.8s ease;
+.dark-theme-button:hover {
+    background-color: #665F55;
+    border-radius: 10rem;
 }
 
-.dark-theme-button:hover::after {
-    opacity: 1;
+.dark-theme-button:hover .dark-theme-button-svg path {
+    fill: #E1D4C9;
 }
 
 .menu-link {
