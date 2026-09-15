@@ -309,6 +309,7 @@ button {
     line-height: 125%;
     letter-spacing: 0;
     text-align: center;
+    color: #403F3D;
 }
 
 .slider__pagination {
@@ -353,28 +354,30 @@ button {
     gap: 4rem;
 }
 
-.images__column-1 {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
+.images__column-1,
 .images__column-2 {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    flex: 1;
+    min-width: 0;
 }
 
-.column-1__image1,
-.column-2__image2 {
-    object-fit: cover;
+.about__image-wrapper-big {
+    height: 590px;
     width: 100%;
-    height: 100%;
-    border-radius: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.column-1__image2,
-.column-2__image1 {
+.about__image-wrapper-small {
+    height: 430px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-image {
     object-fit: cover;
     width: 100%;
     height: 100%;
