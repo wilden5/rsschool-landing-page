@@ -132,3 +132,31 @@
     letter-spacing: 0;
     color: #403F3D;
 }
+
+.menu-offer__pagination-button {
+    display: none;
+    height: 6rem;
+    width: 6rem;
+    border: 1px solid #665F55;
+    background: none;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+
+@media (max-width: 768px) {
+    .menu-offer__product:nth-child(n+5) {
+        display: none;
+    }
+
+    .menu-offer__pagination-button {
+        display: block;
+    }
+
+    .menu-offer__pagination-button:hover {
+        background: #665F55;
+    }
+
+    .menu-offer__pagination-button:hover .pagination-button__icon path {
+        stroke: #E1D4C9;
+    }
+}
