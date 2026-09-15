@@ -171,3 +171,17 @@
         stroke: #E1D4C9;
     }
 }
+
+@media (max-width: 380px) {
+    .menu-offer__title {
+        font-size: 3.2rem;
+    }
+
+    .menu-offer__controls {
+        gap: 0.8rem;
+    }
+
+    .menu-offer__desert-button {
+        width: 11.5rem;
+    }
+}
