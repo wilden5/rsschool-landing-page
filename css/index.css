@@ -354,10 +354,17 @@ button {
 
 .slider__button:hover {
     background: var(--background-container);
+    border: 1px solid transparent;
 }
 
-.slider__button:hover img {
-    filter: invert(1);
+.slider__left-icon,
+.slider__right-icon {
+    stroke: var(--text-primary);
+}
+
+.slider__button:hover .slider__left-icon path,
+.slider__button:hover .slider__right-icon path{
+    stroke: var(--text-inverse);
 }
 
 .slider__card {
