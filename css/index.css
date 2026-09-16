@@ -534,23 +534,24 @@ button {
 .mobile-controls__ios:hover,
 .mobile-controls__android:hover {
     background: var(--background-container);
+    border: 0.1rem solid transparent;
 }
 
 .ios__icon path,
 .android__icon path {
-    fill: var(--background-overlay);
+    fill: var(--text-primary);
 }
 
 .mobile-controls__ios:hover .ios__icon path,
 .mobile-controls__android:hover .android__icon path {
-    fill: var(--background-page);
+    fill: var(--text-inverse);
 }
 
 .mobile-controls__ios:hover .ios__text__line-1,
 .mobile-controls__ios:hover .ios__text__line-2,
 .mobile-controls__android:hover .android__text__line-1,
 .mobile-controls__android:hover .android__text__line-2 {
-    color: var(--background-page);
+    color: var(--text-inverse);
 }
 
 .mobile-app__image {
@@ -696,7 +697,7 @@ button {
     bottom: -0.4rem;
     width: 0;
     height: 2px;
-    background: var(--background-page);
+    background: #E1D4C9;
     transition: width 0.7s ease;
 }
 
