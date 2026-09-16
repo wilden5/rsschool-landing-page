@@ -139,6 +139,7 @@ button {
 
 .light-theme-button.active {
     background-color: var(--light-theme-button-active);
+    cursor: default;
 }
 
 .light-theme-button,
@@ -161,11 +162,16 @@ button {
 
 .dark-theme-button.active {
     background-color: var(--dark-theme-button-active);
+    cursor: default;
 }
 
 .dark-theme-button:hover {
     background-color: var(--dark-theme-button-hover);
     border-radius: 10rem;
+}
+
+.dark-theme-button:hover.active {
+    background-color: var(--dark-theme-button-active);
 }
 
 .dark-theme-button-svg {
