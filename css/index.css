@@ -150,6 +150,7 @@ button {
     width: 44px;
     height: 40px;
     border-radius: 10rem;
+    transition: background-color 0.1s ease;
 }
 
 .light-theme-button-svg {
