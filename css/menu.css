@@ -80,10 +80,11 @@
 .menu-offer__button:hover {
     background: var(--background-container);
     color: var(--text-inverse);
+    border: 1px solid transparent;
 }
 
 .menu-offer__button:hover .menu-offer__icon-wrapper {
-    background: var(--text-inverse);
+    background: var(--background-page);
 }
 
 .menu-offer__grid {
@@ -165,6 +166,7 @@
 
     .menu-offer__pagination-button:hover {
         background: var(--background-container);
+        border: 1px solid transparent;
     }
 
     .pagination-button__icon {
