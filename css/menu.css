@@ -167,6 +167,10 @@
         background: var(--background-container);
     }
 
+    .pagination-button__icon {
+        stroke: var(--text-primary);
+    }
+
     .menu-offer__pagination-button:hover .pagination-button__icon path {
         stroke: var(--text-inverse);
     }
