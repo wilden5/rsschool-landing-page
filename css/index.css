@@ -165,7 +165,7 @@ button {
     display: flex;
     gap: 0.8rem;
     font-family: inherit;
-    color: #403F3D;
+    color: var(--text-primary);
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 150%;
@@ -184,7 +184,7 @@ button {
     content: "";
     position: absolute;
     height: 2px;
-    background: #403F3D;
+    background: var(--text-primary);
     left: 0;
     bottom: -0.4rem;
     width: 0;
@@ -206,7 +206,7 @@ button {
     background: none;
     height: 4.4rem;
     width: 4.4rem;
-    border: 0.1rem solid #665F55;
+    border: 0.1rem solid var(--border-inverse);
     border-radius: 10rem;
     position: relative;
 }
@@ -219,7 +219,7 @@ button {
     transform: translateX(-50%);
     width: 16px;
     height: 2px;
-    background-color: #403F3D;
+    background-color: var(--text-primary);
 }
 
 .burger-icon::before {
@@ -249,7 +249,7 @@ button {
 .offer-title {
     font-family: inherit;
     font-size: 7.2rem;
-    color: #E1D4C9;
+    color: var(--text-inverse);
     font-weight: 600;
     line-height: 105%;
     letter-spacing: 0;
@@ -258,7 +258,7 @@ button {
 
 .offer-title strong {
     font-style: italic;
-    color: #B0907A;
+    color: var(--text-accent);
 }
 
 .offer-text {
@@ -267,7 +267,7 @@ button {
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0;
-    color: #E1D4C9;
+    color: var(--text-inverse);
     margin: 0;
 }
 
@@ -281,12 +281,12 @@ button {
     cursor: pointer;
     padding: 0;
     margin: 0;
-    color: #403F3D;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 150%;
     letter-spacing: 0;
-    background: #E1D4C9;
+    background: var(--background-page);
 }
 
 .offer-button::after {
@@ -318,13 +318,13 @@ button {
     line-height: 125%;
     letter-spacing: 0;
     text-align: center;
-    color: #403F3D;
+    color: var(--text-primary);
     margin: 10rem 0 4rem;
 }
 
 .favorite-coffee__title span {
     font-style: italic;
-    color: #B0907A;
+    color: var(--text-accent);
 }
 
 .favorite-coffee__slider {
@@ -338,14 +338,14 @@ button {
     cursor: pointer;
     padding: 0;
     margin: 0;
-    border: 1px solid #665F55;
+    border: 1px solid var(--border-inverse);
     width: 6rem;
     height: 6rem;
     border-radius: 100px;
 }
 
 .slider__button:hover {
-    background: #665F55;
+    background: var(--background-container);
 }
 
 .slider__button:hover img {
@@ -366,7 +366,7 @@ button {
     line-height: 125%;
     letter-spacing: 0;
     text-align: center;
-    color: #403F3D;
+    color: var(--text-primary);
 }
 .card__image {
     width: 100%;
@@ -381,7 +381,7 @@ button {
     line-height: 150%;
     letter-spacing: 0;
     text-align: center;
-    color: #403F3D;
+    color: var(--text-primary);
 }
 
 .card__price {
@@ -391,7 +391,7 @@ button {
     line-height: 125%;
     letter-spacing: 0;
     text-align: center;
-    color: #403F3D;
+    color: var(--text-primary);
 }
 
 .slider__pagination {
@@ -406,11 +406,11 @@ button {
     border-radius: 10rem;
     height: 0.4rem;
     width: 4rem;
-    background: #C1B6AD;
+    background: var(--border-primary);
 }
 
 .pagination__bar.active {
-    background: #665F55;
+    background: var( --border-inverse);
 }
 
 .about__title {
@@ -418,7 +418,7 @@ button {
     font-size: 6rem;
     line-height: 125%;
     letter-spacing: 0;
-    color: #403F3D;
+    color: var(--text-primary);
     margin: 0 0 4rem;
 }
 
@@ -428,7 +428,7 @@ button {
 
 .about__title span {
     font-style: italic;
-    color: #B0907A;
+    color: var(--text-accent);
 }
 
 .about__images {
@@ -486,13 +486,13 @@ button {
     font-size: 6rem;
     line-height: 125%;
     letter-spacing: 0;
-    color: #403F3D;
+    color: var(--text-primary);
     margin: 0;
 }
 
 .mobile-offer__title span {
     font-style: italic;
-    color: #B0907A;
+    color: var(--text-accent);
 }
 
 .mobile-offer__text {
@@ -500,7 +500,7 @@ button {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0;
-    color: #403F3D;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -519,30 +519,30 @@ button {
     height: 6.4rem;
     background: none;
     cursor: pointer;
-    border: 0.1rem solid #665F55;
+    border: 0.1rem solid var(--border-inverse);
     border-radius: 10rem;
 }
 
 .mobile-controls__ios:hover,
 .mobile-controls__android:hover {
-    background: #665F55;
+    background: var(--background-container);
 }
 
 .ios__icon path,
 .android__icon path {
-    fill: #403F3D;
+    fill: var(--background-overlay);
 }
 
 .mobile-controls__ios:hover .ios__icon path,
 .mobile-controls__android:hover .android__icon path {
-    fill: #E1D4C9;
+    fill: var(--background-page);
 }
 
 .mobile-controls__ios:hover .ios__text__line-1,
 .mobile-controls__ios:hover .ios__text__line-2,
 .mobile-controls__android:hover .android__text__line-1,
 .mobile-controls__android:hover .android__text__line-2 {
-    color: #E1D4C9;
+    color: var(--background-page);
 }
 
 .mobile-app__image {
@@ -566,7 +566,7 @@ button {
 .ios__text__line-1,
 .android__text__line-1 {
     font-family: 'Inter', sans-serif;
-    color: #403F3D;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1rem;
     line-height: 140%;
@@ -577,7 +577,7 @@ button {
 .ios__text__line-2,
 .android__text__line-2 {
     font-family: 'Inter', sans-serif;
-    color: #403F3D;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 150%;
@@ -586,7 +586,7 @@ button {
 
 .main-footer {
     display: flex;
-    background-color: #665F55;
+    background-color: var(--background-container);
     border-radius: 4rem;
     padding: 10rem;
     gap: 10rem;
@@ -606,13 +606,13 @@ button {
     font-size: 60px;
     line-height: 125%;
     letter-spacing: 0;
-    color:#E1D4C9;
+    color: var(--text-inverse);
 }
 
 .footer__title span {
     display: block;
     font-style: italic;
-    color: #B0907A;
+    color: var(--text-accent);
 }
 
 .footer__controls {
@@ -623,15 +623,19 @@ button {
 .footer__button {
     height: 6rem;
     width: 6rem;
-    border: 0.1rem solid #C1B6AD;
+    border: 0.1rem solid var(--border-primary);
     border-radius: 4rem;
     cursor: pointer;
     background: none;
 }
 
 .footer__button:hover {
-    background: #292826;
-    border: 0.1rem solid #292826;
+    background: var(--background-page);
+    border: 0.1rem solid var(--background-page);
+}
+
+.footer__button:hover .footer_button-icon path {
+    stroke: var(--text-primary);
 }
 
 .footer__contact-info {
@@ -645,7 +649,7 @@ button {
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0;
-    color: #E1D4C9;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -663,7 +667,7 @@ button {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0;
-    color: #E1D4C9;
+    color: var(--text-inverse);
 }
 
 .contact-info__text {
@@ -680,7 +684,7 @@ button {
     bottom: -0.4rem;
     width: 0;
     height: 2px;
-    background: #E1D4C9;
+    background: var(--background-page);
     transition: width 0.7s ease;
 }
 
