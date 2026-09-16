@@ -300,22 +300,19 @@ button {
     background: var(--background-page);
 }
 
-.offer-button::after {
-    content: "";
+.offer-button .menu-link__icon {
     position: absolute;
-    transform: translateY(-50%);
-    background: url("../assets/icons/coffee-cup-icon.png") no-repeat center;
-    background-size: contain;
+    transform: translateY(-60%);
     width: 2rem;
     height: 2rem;
-    top: 3rem;
+    top: 50%;
     right: 5.2rem;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.8s ease;
 }
 
-.offer-button:hover::after {
+.offer-button:hover .menu-link__icon {
     opacity: 1;
 }
 
