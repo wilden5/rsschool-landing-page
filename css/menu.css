@@ -161,7 +161,9 @@
     }
 
     .menu-offer__pagination-button {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu-offer__pagination-button:hover {
