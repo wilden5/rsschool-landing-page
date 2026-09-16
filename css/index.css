@@ -143,6 +143,10 @@ button {
     border-radius: 10rem;
 }
 
+.light-theme-button-svg {
+    fill: var(--text-inverse);
+}
+
 .light-theme-button:hover {
     background-color: var(--light-theme-button-hover);
 }
@@ -154,6 +158,10 @@ button {
 .dark-theme-button:hover {
     background-color: var(--dark-theme-button-hover);
     border-radius: 10rem;
+}
+
+.dark-theme-button-svg {
+    fill: var(--text-primary);
 }
 
 .dark-theme-button:hover .dark-theme-button-svg path {
@@ -634,6 +642,10 @@ button {
     border: 0.1rem solid var(--background-page);
 }
 
+.footer_button-icon {
+    stroke: var(--text-inverse);
+}
+
 .footer__button:hover .footer_button-icon path {
     stroke: var(--text-primary);
 }
@@ -649,7 +661,7 @@ button {
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0;
-    color: var(--text-primary);
+    color: var(--text-inverse);
     margin: 0;
 }
 
