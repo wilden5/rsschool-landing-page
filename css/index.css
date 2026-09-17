@@ -380,8 +380,9 @@ button {
 
 .slider__track {
     overflow: hidden;
-    width: 35%;
     position: relative;
+    max-width: 48rem;
+    /*width: 100%;*/
 }
 
 .slider__cards {
@@ -795,6 +796,10 @@ button {
 
     .offer-title {
         font-size: 4.2rem;
+    }
+
+    .favorite-coffee__slider {
+        /*justify-content: center;*/
     }
 
     .slider__button {
