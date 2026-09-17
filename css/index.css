@@ -378,7 +378,21 @@ button {
     stroke: var(--text-inverse);
 }
 
+.slider__track {
+    overflow: hidden;
+    width: 35%;
+    position: relative;
+}
+
+.slider__cards {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
 .slider__card {
+    flex: 0 0 100%;
+    min-width: 0;
     max-width: 48rem;
     display: flex;
     flex-direction: column;
@@ -420,14 +434,14 @@ button {
     color: var(--text-primary);
 }
 
-.slider__pagination {
+.slider__progress-bar {
     display: flex;
     gap: 1.4rem;
     justify-content: center;
     margin-top: 4rem;
 }
 
-.pagination__bar {
+.progress-bar__item {
     display: inline-block;
     border-radius: 10rem;
     height: 0.4rem;
@@ -435,7 +449,7 @@ button {
     background: var(--border-primary);
 }
 
-.pagination__bar.active {
+.progress-bar__item.active {
     background: var( --border-inverse);
 }
 
