@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     MAIN_NAV.addEventListener('click', (event) => {
-        if (event.target.classList.contains('nav-item-link')) {
+        if (event.target.classList.contains('nav-item-link') && !event.target.classList.contains('active')) {
             closeMenuHandler();
         }
     });

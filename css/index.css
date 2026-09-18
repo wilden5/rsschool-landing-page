@@ -202,7 +202,8 @@ button {
     text-decoration: none;
 }
 
-.menu-link.active {
+.menu-link.active,
+.nav-item-link.active {
     cursor: default;
 }
 
@@ -222,7 +223,8 @@ button {
 }
 
 .menu-link:hover::after,
-.menu-link.active::after {
+.menu-link.active::after,
+.nav-item-link.active::after{
     width: 100%;
 }
 
