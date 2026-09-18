@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = '';
     }
 
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && MAIN_NAV.classList.contains('active')) {
+            closeMenuHandler();
+        }
+    } );
+
     BURGER_BUTTON.addEventListener('click', () => {
         MAIN_NAV.classList.toggle('active');
         BURGER_BUTTON.classList.toggle('active');
