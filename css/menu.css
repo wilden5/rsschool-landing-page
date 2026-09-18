@@ -183,6 +183,8 @@
     background-color: var(--background-page);
     border-radius: 4rem;
     padding: 1.6rem;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
 }
 
 .modal__product-image {
@@ -363,6 +365,23 @@
     .menu-offer__pagination-button:hover .pagination-button__icon path {
         stroke: var(--text-inverse);
     }
+
+    /*MODAL WINDOW STYLES STARTS HERE*/
+
+    .modal {
+        max-width: 68.8rem;
+        height: 62.6rem;
+    }
+
+    .feature-button-wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 680px) {
+    .modal__product-image {
+        display: none;
+    }
 }
 
 @media (max-width: 380px) {
@@ -377,4 +396,6 @@
     .menu-offer__desert-button {
         width: 12.5rem;
     }
+
+    /*MODAL WINDOW STYLES STARTS HERE*/
 }
