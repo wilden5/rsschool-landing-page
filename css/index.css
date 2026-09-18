@@ -226,7 +226,7 @@ button {
     width: 100%;
 }
 
-.burger-icon {
+.burger-button {
     display: none;
     cursor: pointer;
     background: none;
@@ -235,25 +235,43 @@ button {
     border: 0.1rem solid var(--border-inverse);
     border-radius: 10rem;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
-.burger-icon::before,
-.burger-icon::after {
+.burger-button.active {
+    transform: rotate(45deg);
+}
+
+.burger-button::before,
+.burger-button::after {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 16px;
-    height: 2px;
+    width: 1.6rem;
+    height: 0.2rem;
     background-color: var(--text-primary);
+    transition: top 0.3s ease, transform 0.3s ease;
 }
 
-.burger-icon::before {
-    top: calc(50% - 4px);
+.burger-button::before {
+    top: calc(50% - 0.4rem);
 }
 
-.burger-icon::after {
-    top: calc(50% + 4px);
+.burger-button.active::before {
+    top: calc(50% - 0.1rem);
+    transform: translateX(-50%) rotate(0deg);
+    width: 2rem;
+}
+
+.burger-button::after {
+    top: calc(50% + 0.4rem);
+}
+
+.burger-button.active::after {
+    transform: translateX(-50%) rotate(90deg);
+    top: calc(50% - 0.1rem);
+    width: 2rem;
 }
 
 .header-hero {
@@ -808,7 +826,7 @@ button {
         letter-spacing: 0;
     }
 
-    .burger-icon {
+    .burger-button {
         display: block;
     }
 
