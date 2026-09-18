@@ -155,6 +155,191 @@
     border-radius: 10rem;
 }
 
+/*MODAL WINDOW STYLES STARTS HERE*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #403F3DCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.hidden {
+
+}
+
+.modal {
+    box-sizing: border-box;
+    display: flex;
+    gap: 2rem;
+    width: 80rem;
+    height: 50.4rem;
+    background-color: var(--background-page);
+    border-radius: 4rem;
+    padding: 1.6rem;
+}
+
+.modal__product-image {
+    max-width: 31rem;
+    max-height: 31rem;
+    border-radius: 4rem;
+}
+
+.modal__product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-details__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+    margin: 0 0 1.2rem;
+    color: var(--text-primary);
+}
+
+.feature-button-wrapper {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.product-details__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.product-details__size,
+.product-details__additives {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+    letter-spacing: 0;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.product-details__size-title {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin: 0;
+}
+
+.product-details__feature-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 14.1rem;
+    height: 4.6rem;
+    border-radius: 10rem;
+    padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+    background-color: var(--background-page);
+    border: 1px solid var(--border-primary);
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 150%;
+    font-family: Inter, sans-serif;
+}
+
+.feature-button-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10rem;
+    background: var(--border-primary);
+    color: var(--text-primary);
+    transition: all 0.7s ease;
+}
+
+.product-details__feature-button:hover .feature-button-icon-wrapper {
+    background: var(--background-page);
+    transition: all 0.7s ease;
+}
+
+.product-details__feature-button:hover,
+.product-details__close-button:hover {
+    background: var(--background-container);
+    color: var(--text-inverse);
+}
+
+.product-details__feature-button.active {
+    background: var(--background-container);
+    color: var(--text-inverse);
+    cursor: default;
+}
+
+.product-details__feature-button.active .feature-button-icon-wrapper {
+    background: var(--background-page);
+}
+
+.price-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-details__price-text,
+.product-details__price-value {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.product-details__notification {
+    display: flex;
+    gap: 0.8rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-primary);
+}
+
+.product-details__notification-text {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.product-details__notification-icon {
+    flex-shrink: 0
+}
+
+.product-details__close-button {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--text-primary);
+    border-radius: 10rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--border-inverse);
+    height: 4.4rem;
+    background-color: var(--background-page);
+    margin-top: auto
+}
+
 @media (max-width: 768px) {
     .menu-offer__product:nth-child(n+5) {
         display: none;
@@ -190,6 +375,6 @@
     }
 
     .menu-offer__desert-button {
-        width: 11.5rem;
+        width: 12.5rem;
     }
 }
