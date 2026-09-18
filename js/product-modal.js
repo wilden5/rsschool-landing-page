@@ -1,3 +1,82 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // todo: В модалке текст нотификации отличается от кофе и всего остального, надо модифаить json
 
+    const MENU_OFFER_GRID = document.querySelector('.menu-offer__grid');
+    const MODAL_OVERLAY = document.querySelector('.modal-overlay');
+
+    const createModalWindow = (product) => {
+        return `
+            <div class="modal">
+                <img class="modal__product-image" src="${product.image}" alt="${product.description}">
+                <div class="modal__product-details">
+                <div class="product-info-wrapper">
+                    <h2 class="product-details__title">${product.name}</h2>
+                    <p class="product-details__description">${product.description}</p>
+                </div>
+                <div class="product-details__size">
+                    <h3 class="product-details__size-title">Size</h3>
+                    <div class="feature-button-wrapper">
+                        <button class="product-details__feature-button active">
+                            <span class="feature-button-icon-wrapper">S</span>
+                            ${product.sizes.s.size}
+                        </button>
+                        <button class="product-details__feature-button">
+                            <span class="feature-button-icon-wrapper">M</span>
+                            ${product.sizes.m.size}
+                        </button>
+                        <button class="product-details__feature-button">
+                            <span class="feature-button-icon-wrapper">L</span>
+                            ${product.sizes.l.size}
+                        </button>
+                    </div>
+                </div>
+                <div class="product-details__additives">
+                    <h3 class="product-details__size-title">Additives</h3>
+                    <div class="feature-button-wrapper">
+                        <button class="product-details__feature-button">
+                            <span class="feature-button-icon-wrapper">1</span>
+                            ${product.additives[0].name}
+                        </button>
+                        <button class="product-details__feature-button">
+                            <span class="feature-button-icon-wrapper">2</span>
+                            ${product.additives[1].name}
+                        </button>
+                        <button class="product-details__feature-button">
+                            <span class="feature-button-icon-wrapper">3</span>
+                            ${product.additives[2].name}
+                        </button>
+                    </div>
+                </div>
+                <div class="price-wrapper">
+                    <p class="product-details__price-text">Total:</p>
+                    <p class="product-details__price-value">${product.price}</p>
+                </div>
+                <div class="product-details__notification">
+                    <svg class="product-details__notification-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_147811_7961)">
+                            <path d="M8 7.66663V11" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 5.00667L8.00667 4.99926" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_147811_7961">
+                                <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="product-details__notification-text">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+                </div>
+                <button class="product-details__close-button">Close</button>
+            </div>
+        </div>
+            `;
+    }
+
+    const openModalWindow = (product) => {
+        MODAL_OVERLAY.innerHTML = createModalWindow(product);
+    }
+
+    MENU_OFFER_GRID.addEventListener('click', (event) => {
+        const productCard = event.target.closest('.menu-offer__product');
+    });
 })
