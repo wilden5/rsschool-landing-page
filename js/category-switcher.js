@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const RESPONSE = await fetch ('../products.json');
     const PRODUCTS = await RESPONSE.json();
-    const DEFAULT_CATEGORY = 'coffee';
+    const COFFEE_CATEGORY = 'coffee';
+    const TEA_CATEGORY = 'tea';
+    const DESSERT_CATEGORY = 'dessert';
 
     const MENU_OFFER_GRID = document.querySelector('.menu-offer__grid');
+    const MENU_OFFER_BUTTONS = document.querySelectorAll('.menu-offer__button');
     const COFFEE_BUTTON = document.querySelector('.menu-offer__coffee-button');
     const TEA_BUTTON = document.querySelector('.menu-offer__tea-button');
     const DESSERT_BUTTON = document.querySelector('.menu-offer__desert-button');
@@ -26,5 +29,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         MENU_OFFER_GRID.innerHTML = filteredProducts.map(createProductCard).join('');
     }
 
-    displayProducts(DEFAULT_CATEGORY);
+    const handleMenuOfferActiveButton = (activeCategory) => {
+        MENU_OFFER_BUTTONS.forEach(button => {
+            button.classList.remove('active');
+        })
+
+        if (activeCategory === COFFEE_CATEGORY) {
+            COFFEE_BUTTON.classList.add('active');
+        }
+
+        if (activeCategory === TEA_CATEGORY) {
+            TEA_BUTTON.classList.add('active');
+        }
+
+        if (activeCategory === DESSERT_CATEGORY) {
+            DESSERT_BUTTON.classList.add('active');
+        }
+    }
+
+    COFFEE_BUTTON.addEventListener('click', () => {
+        handleMenuOfferActiveButton(COFFEE_CATEGORY);
+        displayProducts(COFFEE_CATEGORY);
+    })
+
+    TEA_BUTTON.addEventListener('click', () => {
+        handleMenuOfferActiveButton(TEA_CATEGORY);
+        displayProducts(TEA_CATEGORY);
+    })
+
+    DESSERT_BUTTON.addEventListener('click', () => {
+        handleMenuOfferActiveButton(DESSERT_CATEGORY);
+        displayProducts(DESSERT_CATEGORY);
+    })
+
+    displayProducts(COFFEE_CATEGORY);
 })
