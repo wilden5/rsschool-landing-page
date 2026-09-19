@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const MENU_OFFER_GRID = document.querySelector('.menu-offer__grid');
     const MODAL_OVERLAY = document.querySelector('.modal-overlay');
+    let currentProduct = null;
+    let currentProductBasePrice = 0;
 
     const createModalWindow = (product) => {
         return `
@@ -14,15 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-details__size">
                     <h3 class="product-details__size-title">Size</h3>
                     <div class="feature-button-wrapper">
-                        <button class="product-details__feature-button active">
+                        <button class="product-details__feature-button feature-size active" data-add-price='${product.sizes.s['add-price']}'>
                             <span class="feature-button-icon-wrapper">S</span>
                             ${product.sizes.s.size}
                         </button>
-                        <button class="product-details__feature-button">
+                        <button class="product-details__feature-button feature-size" data-add-price='${product.sizes.m['add-price']}'>
                             <span class="feature-button-icon-wrapper">M</span>
                             ${product.sizes.m.size}
                         </button>
-                        <button class="product-details__feature-button">
+                        <button class="product-details__feature-button feature-size" data-add-price='${product.sizes.l['add-price']}'>
                             <span class="feature-button-icon-wrapper">L</span>
                             ${product.sizes.l.size}
                         </button>
@@ -31,15 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-details__additives">
                     <h3 class="product-details__size-title">Additives</h3>
                     <div class="feature-button-wrapper">
-                        <button class="product-details__feature-button">
+                        <button class="product-details__feature-button feature-additives" data-add-price='${product.additives[0]['add-price']}'>
                             <span class="feature-button-icon-wrapper">1</span>
                             ${product.additives[0].name}
                         </button>
-                        <button class="product-details__feature-button">
+                        <button class="product-details__feature-button feature-additives" data-add-price='${product.additives[1]['add-price']}'>
                             <span class="feature-button-icon-wrapper">2</span>
                             ${product.additives[1].name}
                         </button>
-                        <button class="product-details__feature-button">
+                        <button class="product-details__feature-button feature-additives" data-add-price='${product.additives[2]['add-price']}'>
                             <span class="feature-button-icon-wrapper">3</span>
                             ${product.additives[2].name}
                         </button>
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="price-wrapper">
                     <p class="product-details__price-text">Total:</p>
-                    <p class="product-details__price-value">$${product.price}</p>
+                    <p class="product-details__price-value">${product.price}</p>
                 </div>
                 <div class="product-details__notification">
                     <svg class="product-details__notification-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,11 +76,45 @@ document.addEventListener('DOMContentLoaded', () => {
         MODAL_OVERLAY.innerHTML = createModalWindow(product);
         MODAL_OVERLAY.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        currentProduct = product;
+        currentProductBasePrice = parseFloat(product.price);
     }
 
     const closeModalWindow = () => {
         MODAL_OVERLAY.classList.add('hidden');
         document.body.style.overflow = '';
+    }
+
+    const updateProductPrice = () => {
+        const priceElement = document.querySelector('.product-details__price-value');
+        const clickedButton = event.target.closest('.product-details__feature-button');
+        const isSizeButton = clickedButton.classList.contains('feature-size');
+        const isAdditiveButton = clickedButton.classList.contains('feature-additives');
+
+        if (isSizeButton) {
+            document.querySelectorAll('.feature-size').forEach(button => {
+                button.classList.remove('active');
+            });
+        } else if (isAdditiveButton) {
+            document.querySelectorAll('.feature-additives').forEach(button => {
+                button.classList.remove('active');
+            });
+        }
+
+        clickedButton.classList.add('active');
+
+        const activeSizeButton = document.querySelector('.feature-size.active');
+        const activeAdditiveButton = document.querySelector('.feature-additives.active');
+        let totalProductPrice = currentProductBasePrice;
+
+        if (activeSizeButton) {
+            totalProductPrice += parseFloat(activeSizeButton.dataset.addPrice);
+        }
+        if (activeAdditiveButton) {
+            totalProductPrice += parseFloat(activeAdditiveButton.dataset.addPrice);
+        }
+
+        priceElement.textContent = totalProductPrice.toFixed(2);
     }
 
     MENU_OFFER_GRID.addEventListener('click', (event) => {
@@ -94,6 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     MODAL_OVERLAY.addEventListener('click', (event) => {
         if (event.target === MODAL_OVERLAY || event.target.closest('.product-details__close-button')) {
             closeModalWindow();
+        }
+
+        if (event.target.closest('.product-details__feature-button')) {
+            updateProductPrice();
         }
     });
 
