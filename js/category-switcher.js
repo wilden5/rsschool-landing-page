@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const RESPONSE = await fetch ('../products.json');
-    const PRODUCTS = await RESPONSE.json();
+    window.PRODUCTS = await RESPONSE.json();
     const COFFEE_CATEGORY = 'coffee';
     const TEA_CATEGORY = 'tea';
     const DESSERT_CATEGORY = 'dessert';
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const createProductCard = (product) => {
         return `
-                <div class="menu-offer__product">
+                <div class="menu-offer__product" data-product-id='${product.id}'>
                     <img class="product__image" src="${product.image}" alt="${product.description}">
                     <div class="product__details">
                         <h2 class="product__title">${product.name}</h2>

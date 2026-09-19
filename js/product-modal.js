@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // todo: В модалке текст нотификации отличается от кофе и всего остального, надо модифаить json
-
     const MENU_OFFER_GRID = document.querySelector('.menu-offer__grid');
     const MODAL_OVERLAY = document.querySelector('.modal-overlay');
 
@@ -49,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="price-wrapper">
                     <p class="product-details__price-text">Total:</p>
-                    <p class="product-details__price-value">${product.price}</p>
+                    <p class="product-details__price-value">$${product.price}</p>
                 </div>
                 <div class="product-details__notification">
                     <svg class="product-details__notification-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,9 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openModalWindow = (product) => {
         MODAL_OVERLAY.innerHTML = createModalWindow(product);
+        MODAL_OVERLAY.classList.remove('hidden');
     }
 
     MENU_OFFER_GRID.addEventListener('click', (event) => {
         const productCard = event.target.closest('.menu-offer__product');
+
+        if(productCard) {
+            const productId = parseInt(productCard.dataset.productId);
+            const product = window.PRODUCTS.find(p => p.id === productId);
+            openModalWindow(product);
+        }
     });
 })
