@@ -323,7 +323,8 @@
 }
 
 .product-details__notification-icon {
-    flex-shrink: 0
+    flex-shrink: 0;
+    stroke: var(--text-primary);
 }
 
 .product-details__close-button {
