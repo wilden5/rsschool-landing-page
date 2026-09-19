@@ -95,13 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.feature-size').forEach(button => {
                 button.classList.remove('active');
             });
+            clickedButton.classList.add('active');
         } else if (isAdditiveButton) {
-            document.querySelectorAll('.feature-additives').forEach(button => {
-                button.classList.remove('active');
-            });
+            if (clickedButton.classList.contains('active')) {
+                clickedButton.classList.remove('active');
+            } else {
+                document.querySelectorAll('.feature-additives').forEach(button => {
+                    button.classList.remove('active');
+                });
+                clickedButton.classList.add('active');
+            }
         }
-
-        clickedButton.classList.add('active');
 
         const activeSizeButton = document.querySelector('.feature-size.active');
         const activeAdditiveButton = document.querySelector('.feature-additives.active');
