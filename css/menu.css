@@ -283,11 +283,14 @@
 .product-details__feature-button.active {
     background: var(--background-container);
     color: var(--text-inverse);
-    cursor: default;
 }
 
 .product-details__feature-button.active .feature-button-icon-wrapper {
     background: var(--background-page);
+}
+
+.feature-size.active {
+    cursor: default;
 }
 
 .price-wrapper {

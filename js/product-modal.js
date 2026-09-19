@@ -97,26 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             clickedButton.classList.add('active');
         } else if (isAdditiveButton) {
-            if (clickedButton.classList.contains('active')) {
-                clickedButton.classList.remove('active');
-            } else {
-                document.querySelectorAll('.feature-additives').forEach(button => {
-                    button.classList.remove('active');
-                });
-                clickedButton.classList.add('active');
-            }
+            clickedButton.classList.toggle('active');
         }
 
         const activeSizeButton = document.querySelector('.feature-size.active');
-        const activeAdditiveButton = document.querySelector('.feature-additives.active');
+        const activeAdditiveButtons = document.querySelectorAll('.feature-additives.active');
         let totalProductPrice = currentProductBasePrice;
 
         if (activeSizeButton) {
             totalProductPrice += parseFloat(activeSizeButton.dataset.addPrice);
         }
-        if (activeAdditiveButton) {
-            totalProductPrice += parseFloat(activeAdditiveButton.dataset.addPrice);
-        }
+        activeAdditiveButtons.forEach((additive) => {
+            totalProductPrice += parseFloat(additive.dataset.addPrice);
+        });
 
         priceElement.textContent = `$${totalProductPrice.toFixed(2)}`;
     }
@@ -124,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     MENU_OFFER_GRID.addEventListener('click', (event) => {
         const productCard = event.target.closest('.menu-offer__product');
 
-        if(productCard) {
+        if (productCard) {
             const productId = parseInt(productCard.dataset.productId);
             const product = window.PRODUCTS.find(p => p.id === productId);
             openModalWindow(product);
