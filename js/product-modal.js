@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="price-wrapper">
                     <p class="product-details__price-text">Total:</p>
-                    <p class="product-details__price-value">${product.price}</p>
+                    <p class="product-details__price-value">$${product.price}</p>
                 </div>
                 <div class="product-details__notification">
                     <svg class="product-details__notification-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             totalProductPrice += parseFloat(activeAdditiveButton.dataset.addPrice);
         }
 
-        priceElement.textContent = totalProductPrice.toFixed(2);
+        priceElement.textContent = `$${totalProductPrice.toFixed(2)}`;
     }
 
     MENU_OFFER_GRID.addEventListener('click', (event) => {
