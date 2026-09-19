@@ -73,6 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModalWindow = (product) => {
         MODAL_OVERLAY.innerHTML = createModalWindow(product);
         MODAL_OVERLAY.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    const closeModalWindow = () => {
+        MODAL_OVERLAY.classList.add('hidden');
+        document.body.style.overflow = '';
     }
 
     MENU_OFFER_GRID.addEventListener('click', (event) => {
@@ -82,6 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const productId = parseInt(productCard.dataset.productId);
             const product = window.PRODUCTS.find(p => p.id === productId);
             openModalWindow(product);
+        }
+    });
+
+    MODAL_OVERLAY.addEventListener('click', (event) => {
+        if (event.target === MODAL_OVERLAY || event.target.closest('.product-details__close-button')) {
+            closeModalWindow();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !MODAL_OVERLAY.classList.contains('hidden')) {
+            closeModalWindow();
         }
     });
 })

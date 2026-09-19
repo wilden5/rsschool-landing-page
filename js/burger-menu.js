@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.key === 'Escape' && MAIN_NAV.classList.contains('active')) {
             closeMenuHandler();
         }
-    } );
+    });
 
     BURGER_BUTTON.addEventListener('click', () => {
         MAIN_NAV.classList.toggle('active');
