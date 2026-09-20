@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const COFFEE_CATEGORY = 'coffee';
-    const TEA_CATEGORY = 'tea';
-    const DESSERT_CATEGORY = 'dessert';
-    const MENU_OFFER_GRID = document.querySelector('.menu-offer__grid');
     const PAGINATION_BUTTON = document.querySelector('.menu-offer__pagination-button');
-    const MENU_OFFER_BUTTONS = document.querySelectorAll('.menu-offer__button');
-
     let visibleCardsCount = 4;
-    let currentCategory = COFFEE_CATEGORY;
 
     const showCards = (count) => {
         const cards = document.querySelectorAll('.menu-offer__product');

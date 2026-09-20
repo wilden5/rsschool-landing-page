@@ -50,24 +50,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     COFFEE_BUTTON.addEventListener('click', () => {
         handleMenuOfferActiveButton(COFFEE_CATEGORY);
         displayProducts(COFFEE_CATEGORY);
-
-        document.dispatchEvent(new CustomEvent('categoryChanged', {
-            detail: { category: DESSERT_CATEGORY }
-        }));
+        document.dispatchEvent(new CustomEvent('categoryChanged'));
     })
 
     TEA_BUTTON.addEventListener('click', () => {
         handleMenuOfferActiveButton(TEA_CATEGORY);
         displayProducts(TEA_CATEGORY);
+        document.dispatchEvent(new CustomEvent('categoryChanged'));
     })
 
     DESSERT_BUTTON.addEventListener('click', () => {
         handleMenuOfferActiveButton(DESSERT_CATEGORY);
         displayProducts(DESSERT_CATEGORY);
-
-        document.dispatchEvent(new CustomEvent('categoryChanged', {
-            detail: { category: DESSERT_CATEGORY }
-        }));
+        document.dispatchEvent(new CustomEvent('categoryChanged'));
     })
 
     displayProducts(COFFEE_CATEGORY);
