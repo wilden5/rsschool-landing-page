@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const handlePaginationButtonClick = () => {
         visibleCardsCount = 8;
         showCards(visibleCardsCount);
-        //updatePaginationButton();
+        updatePaginationButton();
     }
 
     const resetPaginationButton = () => {
@@ -47,4 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     PAGINATION_BUTTON.addEventListener('click', handlePaginationButtonClick);
+
+    document.addEventListener('categoryChanged', resetPaginationButton);
 })
