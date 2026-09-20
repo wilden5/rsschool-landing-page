@@ -91,7 +91,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 310px);
     justify-content: center;
-    gap: 4rem;
+    gap: 3.4rem;
     width: 100%;
 }
 
@@ -156,6 +156,10 @@
 }
 
 @media (max-width: 768px) {
+    .menu-offer__grid {
+        gap: 4rem;
+    }
+
     .menu-offer__product:nth-child(n+5) {
         display: none;
     }
