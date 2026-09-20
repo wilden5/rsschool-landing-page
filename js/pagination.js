@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const PAGINATION_BUTTON = document.querySelector('.menu-offer__pagination-button');
-    const VISIBLE_CARDS_COUNT_DESKTOP = 8;
+    const CARDS_LIMIT_DESKTOP = 8;
+    const CARDS_LIMIT_MOBILE = 4;
     const MOBILE_MEDIA_QUERY = window.matchMedia("(max-width: 768px)");
-    let visibleCardsCountMobile = 4;
+
+    let visibleCardsCount = CARDS_LIMIT_MOBILE;
 
     const showCards = (count) => {
         const cards = document.querySelectorAll('.menu-offer__product');
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const hasHiddenCards = () => {
         const cards = document.querySelectorAll('.menu-offer__product');
-        return cards.length > visibleCardsCountMobile;
+        return cards.length > visibleCardsCount;
     }
 
     const updatePaginationButton = () => {
@@ -22,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const handlePaginationButtonClick = () => {
-        visibleCardsCountMobile = VISIBLE_CARDS_COUNT_DESKTOP;
-        showCards(visibleCardsCountMobile);
+        visibleCardsCount = CARDS_LIMIT_DESKTOP;
+        showCards(visibleCardsCount);
         updatePaginationButton();
     }
 
     const resetPaginationButton = () => {
-        visibleCardsCountMobile = 4;
-        showCards(visibleCardsCountMobile);
+        visibleCardsCount = 4;
+        showCards(visibleCardsCount);
         updatePaginationButton();
     }
 
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.matches) {
             resetPaginationButton();
         } else {
-            showCards(VISIBLE_CARDS_COUNT_DESKTOP);
+            showCards(CARDS_LIMIT_DESKTOP);
             PAGINATION_BUTTON.style.display = 'none';
         }
     };
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (MOBILE_MEDIA_QUERY.matches) {
             resetPaginationButton();
         } else {
-            showCards(VISIBLE_CARDS_COUNT_DESKTOP);
+            showCards(CARDS_LIMIT_DESKTOP);
             PAGINATION_BUTTON.style.display = 'none';
         }
     });
