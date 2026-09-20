@@ -6,11 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = document.querySelectorAll('.menu-offer__product');
 
         cards.forEach((card, index) => {
-            if (index < count) {
-                card.style.display = 'flex';
-            } else {
-                card.style.display = 'none';
-            }
+            card.style.display = index < count ? 'flex' : 'none';
         });
     }
 
@@ -20,11 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const updatePaginationButton = () => {
-        if (hasHiddenCards()) {
-            PAGINATION_BUTTON.style.display = 'flex';
-        } else {
-            PAGINATION_BUTTON.style.display = 'none';
-        }
+        PAGINATION_BUTTON.style.display = hasHiddenCards() ? 'flex' : 'none';
     }
 
     const handlePaginationButtonClick = () => {
