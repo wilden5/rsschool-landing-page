@@ -1,0 +1,204 @@
+.menu-offer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 4rem;
+    margin-bottom: 10rem;
+}
+
+.menu-offer__title {
+    max-width: 80rem;
+    margin: 0;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 125%;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.menu-offer__title span {
+    font-style: italic;
+    color: var(--text-accent);
+}
+.menu-offer__controls {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.menu-offer__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: none;
+    cursor: pointer;
+    height: 4.6rem;
+    border: 1px solid var(--border-primary);
+    border-radius: 10rem;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--text-primary);
+    padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+}
+
+.menu-offer__coffee-button {
+    width: 11.5rem;
+}
+
+.menu-offer__tea-button {
+    width: 9rem;
+}
+
+.menu-offer__desert-button {
+    width: 12.4rem;
+}
+
+.menu-offer__button.active {
+    background: var(--background-container);
+    color: var(--text-inverse);
+}
+
+.menu-offer__button.active .menu-offer__icon-wrapper {
+    background: var(--background-page);
+}
+
+.menu-offer__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10rem;
+    background: var(--border-primary);
+}
+
+.menu-offer__button:hover {
+    background: var(--background-container);
+    color: var(--text-inverse);
+    border: 1px solid transparent;
+}
+
+.menu-offer__button:hover .menu-offer__icon-wrapper {
+    background: var(--background-page);
+}
+
+.menu-offer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 310px);
+    justify-content: center;
+    gap: 3.4rem;
+    width: 100%;
+}
+
+.menu-offer__product {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid var(--border-primary);
+    border-radius: 4rem;
+    height: 50.6rem;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.product__image {
+    border-radius: 4rem;
+}
+
+.menu-offer__product:hover {
+    transform: scale(1.1);
+}
+
+.product__details {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.2rem;
+    flex-grow: 1;
+}
+
+.product__title {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+    color: var(--text-primary);
+}
+
+.product__description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--text-primary);
+    flex-grow: 1;
+}
+
+.product__price {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+    color: var(--text-primary);
+}
+
+.menu-offer__pagination-button {
+    display: none;
+    height: 6rem;
+    width: 6rem;
+    border: 1px solid var(--border-inverse);
+    background: none;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+
+@media (max-width: 768px) {
+    .menu-offer__grid {
+        gap: 4rem;
+    }
+
+    .menu-offer__product:nth-child(n+5) {
+        display: none;
+    }
+
+    .menu-offer__pagination-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-offer__pagination-button:hover {
+        background: var(--background-container);
+        border: 1px solid transparent;
+    }
+
+    .pagination-button__icon {
+        stroke: var(--text-primary);
+    }
+
+    .menu-offer__pagination-button:hover .pagination-button__icon path {
+        stroke: var(--text-inverse);
+    }
+}
+
+@media (max-width: 380px) {
+    .menu-offer__title {
+        font-size: 3.2rem;
+    }
+
+    .menu-offer__controls {
+        gap: 0.8rem;
+    }
+
+    .menu-offer__desert-button {
+        width: 11.5rem;
+    }
+}
