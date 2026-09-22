@@ -102,10 +102,15 @@
     border-radius: 4rem;
     height: 50.6rem;
     width: 100%;
+    transition: transform 0.5s ease;
 }
 
 .product__image {
     border-radius: 4rem;
+}
+
+.menu-offer__product:hover {
+    transform: scale(1.1);
 }
 
 .product__details {
