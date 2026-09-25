@@ -318,6 +318,9 @@ button {
 }
 
 .offer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 20rem;
     height: 6.4rem;
@@ -333,6 +336,7 @@ button {
     line-height: 150%;
     letter-spacing: 0;
     background: var(--background-page);
+    text-decoration: none;
 }
 
 .offer-button .menu-link__icon {
