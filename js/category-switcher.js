@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const RESPONSE = await fetch ('/products.json');
+    const RESPONSE = await fetch ('products.json');
     window.PRODUCTS = await RESPONSE.json();
     const COFFEE_CATEGORY = 'coffee';
     const TEA_CATEGORY = 'tea';
