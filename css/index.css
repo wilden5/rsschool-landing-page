@@ -576,6 +576,7 @@ button {
 
 .mobile-controls__ios,
 .mobile-controls__android {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     padding-left: 2.4rem;
@@ -586,6 +587,7 @@ button {
     cursor: pointer;
     border: 0.1rem solid var(--border-inverse);
     border-radius: 10rem;
+    text-decoration: none;
 }
 
 .mobile-controls__ios:hover,
@@ -687,6 +689,10 @@ button {
 }
 
 .footer__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     height: 6rem;
     width: 6rem;
     border: 0.1rem solid var(--border-primary);
