@@ -86,6 +86,10 @@ button {
     text-decoration: none;
 }
 
+.main-nav-list li:last-child {
+    display: none;
+}
+
 .nav-item-link {
     position: relative;
     display: inline-block;
@@ -198,7 +202,8 @@ button {
     text-decoration: none;
 }
 
-.menu-link.active {
+.menu-link.active,
+.nav-item-link.active {
     cursor: default;
 }
 
@@ -218,11 +223,12 @@ button {
 }
 
 .menu-link:hover::after,
-.menu-link.active::after {
+.menu-link.active::after,
+.nav-item-link.active::after{
     width: 100%;
 }
 
-.burger-icon {
+.burger-button {
     display: none;
     cursor: pointer;
     background: none;
@@ -231,25 +237,43 @@ button {
     border: 0.1rem solid var(--border-inverse);
     border-radius: 10rem;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
-.burger-icon::before,
-.burger-icon::after {
+.burger-button.active {
+    transform: rotate(45deg);
+}
+
+.burger-button::before,
+.burger-button::after {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 16px;
-    height: 2px;
+    width: 1.6rem;
+    height: 0.2rem;
     background-color: var(--text-primary);
+    transition: top 0.3s ease, transform 0.3s ease;
 }
 
-.burger-icon::before {
-    top: calc(50% - 4px);
+.burger-button::before {
+    top: calc(50% - 0.4rem);
 }
 
-.burger-icon::after {
-    top: calc(50% + 4px);
+.burger-button.active::before {
+    top: calc(50% - 0.1rem);
+    transform: translateX(-50%) rotate(0deg);
+    width: 2rem;
+}
+
+.burger-button::after {
+    top: calc(50% + 0.4rem);
+}
+
+.burger-button.active::after {
+    transform: translateX(-50%) rotate(90deg);
+    top: calc(50% - 0.1rem);
+    width: 2rem;
 }
 
 .header-hero {
@@ -294,6 +318,9 @@ button {
 }
 
 .offer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 20rem;
     height: 6.4rem;
@@ -309,6 +336,7 @@ button {
     line-height: 150%;
     letter-spacing: 0;
     background: var(--background-page);
+    text-decoration: none;
 }
 
 .offer-button .menu-link__icon {
@@ -378,7 +406,22 @@ button {
     stroke: var(--text-inverse);
 }
 
+.slider__track {
+    overflow: hidden;
+    position: relative;
+    max-width: 48rem;
+    /*width: 100%;*/
+}
+
+.slider__cards {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
 .slider__card {
+    flex: 0 0 100%;
+    min-width: 0;
     max-width: 48rem;
     display: flex;
     flex-direction: column;
@@ -420,14 +463,14 @@ button {
     color: var(--text-primary);
 }
 
-.slider__pagination {
+.slider__progress-bar {
     display: flex;
     gap: 1.4rem;
     justify-content: center;
     margin-top: 4rem;
 }
 
-.pagination__bar {
+.progress-bar__item {
     display: inline-block;
     border-radius: 10rem;
     height: 0.4rem;
@@ -435,7 +478,7 @@ button {
     background: var(--border-primary);
 }
 
-.pagination__bar.active {
+.progress-bar__item.active {
     background: var( --border-inverse);
 }
 
@@ -744,15 +787,64 @@ button {
         padding-left: 6rem;
     }
 
-    .main-nav {
-        display: none;
-    }
-
     .menu-link {
         display: none;
     }
 
-    .burger-icon {
+    .header-bar {
+        position: relative;
+    }
+
+    .main-nav {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-page);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .main-nav-list li:last-child {
+        display: block;
+        margin-top: 4rem;
+    }
+
+    .menu-link__icon {
+        width: 4rem;
+        height: 4rem;
+        padding-left: 1.6rem;
+        vertical-align: middle;
+    }
+
+
+    .main-nav.active {
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-nav .main-nav-list {
+        flex-direction: column;
+        gap: 6rem;
+        text-align: center;
+        justify-content: normal;
+        padding: 16.4rem 0 0;
+        width: 100%;
+    }
+
+    .main-nav .nav-item-link {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 125%;
+        letter-spacing: 0;
+    }
+
+    .burger-button {
         display: block;
     }
 
@@ -787,6 +879,10 @@ button {
 
     .offer-title {
         font-size: 4.2rem;
+    }
+
+    .favorite-coffee__slider {
+        /*justify-content: center;*/
     }
 
     .slider__button {
